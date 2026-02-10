@@ -30,5 +30,9 @@ void loop() {
     else if (command == '0') {
       digitalWrite(ledPin, LOW);  // Turn LED OFF
     }
+
+    // Clear buffer
+    while(Serial.available() > 0) Serial.read();
+
   }
 }
